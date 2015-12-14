@@ -6,7 +6,7 @@ import (
 	"gopkg.in/mgo.v2"
 		)
 var Session *mgo.Session
-var mongohosts = "goExample_database_1"
+var mongohosts = "goexample_database_1"
 
 func init() {
 	log.Println("Datastore Initialized");

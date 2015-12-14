@@ -5,6 +5,7 @@ import (
 
 	"net/http"
 	"os"
+	"log"
 	
 	"github.com/julienschmidt/httprouter"
 )
@@ -16,6 +17,7 @@ func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "9091"
-	}
+	}	
+	log.Printf("Authentic Form & Function (& Framework) listening on %s", port)
 	http.ListenAndServe(":"+port, router)
 }
