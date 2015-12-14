@@ -1,0 +1,15 @@
+goexample:  
+  build: .
+  ports: 
+    - 9091:9091
+  volumes:
+    - /go/src/github.com/AuthenticFF/GoExample/
+  links:
+    - database
+  environment:
+    - DB_NAME=goExample
+    - PORT=9091
+
+database:  
+  image: mongo:3.0.7
+  command: mongod --smallfiles --quiet --logpath=/dev/null
