@@ -18,6 +18,6 @@ func main() {
 	if port == "" {
 		port = "9091"
 	}	
-	log.Println("Authentic Form & Function (& Framework) listening on %s", port)
+	log.Println("Authentic Form & Function (& Framework) listening on", port)
 	http.ListenAndServe(":"+port, router)
 }

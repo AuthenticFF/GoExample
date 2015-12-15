@@ -20,7 +20,9 @@ func Init(router *httprouter.Router) *httprouter.Router {
 }
 
 
-
+/*
+helper funcs/structs
+*/
 type httpStatus struct {
 	err    error
 	status int
@@ -32,8 +34,6 @@ func ServerError(err error) httpStatus {
 func StatusOk(status int) httpStatus {
 	return httpStatus{nil, status}
 }
-
-
 type controllerRoute func(http.ResponseWriter, *http.Request, httprouter.Params) (interface{}, httpStatus);
 
 func PublicRoute(r controllerRoute) httprouter.Handle {
