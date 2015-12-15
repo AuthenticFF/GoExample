@@ -6,8 +6,8 @@ import (
 	"log"
 )
 
-var Example ExampleService
 var DB DBService
+var Example ExampleService
 
 func init() {
 	Example = ExampleService{}
